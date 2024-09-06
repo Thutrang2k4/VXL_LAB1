@@ -86,7 +86,7 @@ int main(void)
   /* Initialize all configured peripherals */
   MX_GPIO_Init();
   /* USER CODE BEGIN 2 */
-  void dislaysclock(int num){
+  void  setNumberOnClock(int num){
 	  switch(num){
 	  case 0:
 		  HAL_GPIO_WritePin(LED_0_GPIO_Port, LED_0_Pin, RESET);
@@ -126,15 +126,7 @@ int main(void)
 		  break;
 	  }
   }
-
-  /* USER CODE END 2 */
-
-  /* Infinite loop */
-  /* USER CODE BEGIN WHILE */
-  int counter=1;
-  while (1)
-  {
-
+  void clearAllClock(){
 	  HAL_GPIO_WritePin(LED_0_GPIO_Port, LED_0_Pin, SET);
 	  HAL_GPIO_WritePin(LED_1_GPIO_Port, LED_1_Pin, SET);
 	  HAL_GPIO_WritePin(LED_2_GPIO_Port, LED_2_Pin, SET);
@@ -147,7 +139,18 @@ int main(void)
 	  HAL_GPIO_WritePin(LED_9_GPIO_Port, LED_9_Pin, SET);
 	  HAL_GPIO_WritePin(LED_10_GPIO_Port, LED_10_Pin, SET);
 	  HAL_GPIO_WritePin(LED_11_GPIO_Port, LED_11_Pin, SET);
-	  dislaysclock(counter++);
+  }
+
+  /* USER CODE END 2 */
+
+  /* Infinite loop */
+  /* USER CODE BEGIN WHILE */
+  int counter=1;
+  while (1)
+  {
+
+	  clearAllClock();
+	  setNumberOnClock(counter++);
 	  if(counter>=12)
 		  counter=0;
 	  HAL_Delay(1000);
