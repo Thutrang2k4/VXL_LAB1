@@ -6,6 +6,10 @@
  */
 #include "Exercise_6-10.h"
 
+int second=0;
+int minute=0;
+int hour=0;
+
 void init_exercises(){
 	HAL_GPIO_WritePin(LED_0_GPIO_Port, LED_0_Pin, RESET);
     HAL_GPIO_WritePin(LED_1_GPIO_Port, LED_1_Pin, RESET);
@@ -114,7 +118,8 @@ void clearNumberOnClock(int num){
 		  break;
 	 }
 }
-void exercise10(int second,int minute, int hour){
+void exercise10(){
+	second++;
     if(second>=60){
     	second=0;
     	minute++;

@@ -15,7 +15,7 @@ void init_exercises();
 void clearAllClock();
 void setNumberOnClock(int num);
 void clearNumberOnClock(int num);
-void exercise10(int second,int minute, int hour);
+void exercise10();
 
 
 #endif /* INC_EXERCISE_6_10_H_ */

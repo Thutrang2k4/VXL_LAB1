@@ -92,13 +92,9 @@ int main(void)
 
   /* Infinite loop */
   /* USER CODE BEGIN WHILE */
-  int second=0;
-  int minute=0;
-  int hour=0;
   while (1)
   {
-	  second++;
-	  exercise10(second,minute,hour);
+	  exercise10();
 	  HAL_Delay(100);
     /* USER CODE END WHILE */
 

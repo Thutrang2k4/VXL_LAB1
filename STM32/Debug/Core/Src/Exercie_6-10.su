@@ -1,0 +1,5 @@
+Exercie_6-10.c:13:6:init_exercises	8	static
+Exercie_6-10.c:27:6:clearAllClock	8	static
+Exercie_6-10.c:41:7:setNumberOnClock	16	static
+Exercie_6-10.c:81:6:clearNumberOnClock	16	static
+Exercie_6-10.c:121:6:exercise10	8	static
